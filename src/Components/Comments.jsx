@@ -14,11 +14,12 @@ class Comments extends Component {
         {/* {this.props.comments.map((comment) => (
           <li>{comment}</li>
         ))} */}
-        {console.log(this.props.author)}
+        {/* {console.log(this.props.author)} */}
         <p>{this.props.author}</p>
         <p>{this.props.text}</p>
-        <p>{this.props.date}</p>
-        <br></br>
+        <Moment format="hh:mm:ss a YYYY/DD/MM ">{this.props.date}</Moment>
+        <br />
+        <br />
       </div>
     );
   }
