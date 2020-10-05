@@ -10,13 +10,21 @@ class Article extends Component {
   }
   render() {
     return (
-      <div>
-        <h1>{this.props.article.Title}</h1>
-        <p>{this.props.article.author}</p>
-        <Moment format="hh:mm:ss a YYYY/DD/MM ">{this.props.date}</Moment>
+      <div className="article_Flexbox">
+        <h1 className="article_title">{this.props.article.Title}</h1>
+        <div className="article_nameanddate">
+          <p>
+            <b>{this.props.article.author}</b>
+          </p>
+          {/* Moment is for see time properly */}
+          <p className="article_date">
+            <Moment format="YYYY/DD/MM hh:mm:ss a" className="dateheight">
+              {this.props.date}
+            </Moment>
+          </p>
+        </div>
 
         <p>{this.props.article.text}</p>
-        <br />
       </div>
     );
   }

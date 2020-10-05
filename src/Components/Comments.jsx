@@ -11,15 +11,15 @@ class Comments extends Component {
   render() {
     return (
       <div>
-        {/* {this.props.comments.map((comment) => (
-          <li>{comment}</li>
-        ))} */}
-        {/* {console.log(this.props.author)} */}
-        <p>{this.props.author}</p>
+        <p>
+          <b>{this.props.author}</b>
+          <br />
+          {/* Moment is for see time properly */}
+          <Moment format="YYYY/DD/MM  hh:mm:ss a " className="dateheight">
+            {this.props.date}
+          </Moment>
+        </p>
         <p>{this.props.text}</p>
-        <Moment format="hh:mm:ss a YYYY/DD/MM ">{this.props.date}</Moment>
-        <br />
-        <br />
       </div>
     );
   }
